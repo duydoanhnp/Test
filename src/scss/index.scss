@@ -1,0 +1,78 @@
+* {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+//Pracitce1
+
+.practice1 {
+  padding: 20px;
+  .circle {
+    position: relative;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    .linear {
+      width: 50%;
+      height: 1px;
+      background: transparent;
+      position: absolute;
+      top: 50%;
+      transform-origin: right;
+      animation: animate 10s linear infinite;
+      &:after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(145, 124, 201);
+        top: -10px;
+        left: -5%;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//Pracitce2
+
+.practice2 {
+  padding: 20px;
+  background-color: pink;
+  .main {
+    .boder {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 50px;
+      background-color: aqua;
+      border-radius: 5px;
+      .item {
+        position: relative;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        .content {
+          width: 100px;
+          height: 100px;
+          padding: 20px;
+          border: 1px solid white;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
